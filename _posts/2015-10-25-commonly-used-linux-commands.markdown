@@ -17,10 +17,23 @@ find -name "file_name"
 #Find all files that don't match the given name
 find -not -name "file_name"		  	 
 
-#Find all files that contains the given string in the name
-find . -type f -name "*some_string*"  
+#Find all files that contain the given string in its name
+find -type f -name "*some_string*"  
+
+#Find all files that contains the given string
+grep -rl . -e  "some_string"
+
+#Find all files with the given extension that contain the given string
+grep --include=\*.{java} -rl . -e "some_string"
+
+#Find all files without the given extension that contain the given string
+grep --exclude=\*.{java} -rl . -e "some_string"
 {% endhighlight %}
 <br/>
+
+# Searching/Manipulating Strings
+
+
 
 
 

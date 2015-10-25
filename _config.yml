@@ -2,7 +2,7 @@
 title: patelkishan.com 
 email: kishan@patelkishan.com
 description: > # this means to ignore newlines until "baseurl:"
-  Kishan Patel's Website - Home of Random Blogs and Technical Articles
+  Kishan Patel's Website: <br/> Home of Random Posts
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.patelkishan.com" # the base hostname & protocol for your site
 github_username: kishan-patel 

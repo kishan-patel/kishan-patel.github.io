@@ -20,21 +20,21 @@ find -not -name 'some_file_name'
 find -type f -name 'some_string'  
 
 #Find all files that contain the given string
-find . -type f -exec grep 'some_string' {} +
+find . -type f -exec grep -l 'some_string' {} +
 
 #Find all files with the given extension(s) that contain the given string
-find . -type f -name "*.'some_extension'" -exec grep 'some_string' {} +
-find . -type f -name \( -name "*.'some_extension'" -o -name "*.'some_extension'" \) -exec grep 'some_string' {} + 
+find . -type f -name "*.'some_extension'" -exec grep -l 'some_string' {} +
+find . -type f -name \( -name "*.'some_extension'" -o -name "*.'some_extension'" \) -exec grep -l 'some_string' {} + 
 
 #Find all files without the given extension that contain the given string
-find . -type f ! -name "*.'some_extension'" -exec grep 'some_string' {} +
+find . -type f ! -name "*.'some_extension'" -exec grep -l 'some_string' {} +
 {% endhighlight %}
 <br/>
 
 # Searching/Manipulating Strings
 {%highlight bash %}
 #Finding and replacing a string in all the files in the current directory
-sed -i "s/'some_string_to_replace'/'some_stirng_to_replace_with'/g" *
+sed -i "s/'some_string_to_replace'/'some_string_to_replace_with'/g" *
 
 #Split a string based on a delimiter and print it
 echo "*'some_delimeter'*" | awk -F "'some_delimeter'" "{print $1}"

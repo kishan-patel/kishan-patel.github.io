@@ -9,11 +9,12 @@ categories: quick-reference
 
 <br/>
 
-## Creating and Destroying Objects
+## Chapter 1: Creating and Destroying Objects
 
 > # Item 1: Consider static factory methods instead of constructors  
-  
-- One of the advantageous is that it has a name, and this makes the client code easier to use and read.
-- A class can only have one constructor with a given signature, and often times, to get around this, programmers just change the order of the types. This however, is not good practice because we can easily call the wrong constructor by mistake.
-- In cases where a class needs multiple constructors, we can use static factory methods to highlight key differences.
-- Static factory methods are not required to create a new instance of the class each time they are invoked.
+
+1. Makes the client code easier to understand because you are able to tell from the name what type of object you are getting, rather than having to rely on the arguments. It is also helpful in cases where you have multiple constructors that differ only in the order of the arguments: with static factory methods, a programmer is less likely to call the wrong constructor.
+
+2. You don't have to return a new object each time the constructor is invoked; this means that objects are not created unnecessarily, and that classes can maintain strict control over which objects exist at any time.
+
+3. You can return any subtype of the return type 

@@ -1,0 +1,33 @@
+---
+layout: post
+title: "1st Fitness Post"
+categories: fitness, nutrition
+---
+
+It's been about eight years since I bought my first gym membership, and to be honest, I am no where close to what I wanted to look like when I was 19. My only excuse is that I was doing a Bachelor of Engineering, so I had to devote a lot of my time studying during eight months of the year. This excuse still does not cut it however, because during this time, I had no other commitments or responsibilities: I was not working, I did not have to worry about preparing breakfast/dinner/lunch (this could've worked against me come to think of it), I did not have any health issues, I wasn't in any sort of financial trouble and the list goes on. The bottom line is, I FAILED. For someone who is really passionate about sports and thinks about fitness all the time, I FAILED. That's okay though, if there's one thing I won't do, it's to give up. However, I don't want to continue doing the same thing I have been doing for the past 8 years, and I think it's time I did things slightly differently.
+
+For starters, I'm going to create this blog post which will include the amount of calories I need to intake in order to get to where I want to be. Additionally, I'm going to be filling out the workout chart below on a regular basis in order to track my progress. I'm going to try the routine below for three months (October, November, December) and take it from there. I'm really hoping to see some sort of results so that I'm able to go into the new year motiviated and hungrier for more results.
+
+# Current Status & End Goal
+Current:    weight = 157, body fat = ???
+Goal:       weight = 165, body fat = same as before
+
+# Nutrition
+
+I think even more than exercise, the biggest reason why I haven't seen the results that I was looking for boils down to poor nutrition. I have totally neglected the importance of nutrition: there are times where I skip breakfast, I'd have late lunches or no lunches, I wouldn't really pay attention to what I was eating for dinner. This time around, I'm going to stick to a meal plan. I'm not really good when it comes to the kitchen, okay i'm pretty awful actually, but musturing up some chicken breast with some veggies shouldn't require an artist. Below are some summaries of the calories I'd need to gain weight as well as the macronutrients I should be consuming and the meal plan I intend to follow (yes I know, I'm pretty boring, but right now, I'm just about getting the job done and don't want to spend too much time becoming a master chef).
+
+#### Caloric Intake
+According to this (http://www.calculator.net/calorie-calculator.html?ctype=standard&cage=26&csex=m&cheightfeet=5&cheightinch=11&cpound=157&cheightmeter=180&ckg=60&cactivity=1.55&printit=0&x=75&y=4) calculator (I'm really trusting this badboy), I'd need:
+2657 calories, to maintain my current weight
+3157 calories, to gain 1 pound a week
+3657 calories, to gain 2 lbs a week
+
+Considering I have trouble getting an intake of 2657 calories, I think it's a safer bet to go with a consumption of 3157 calories per day. So these are the numbers that would apply to 26 yo males that are 5ft11', 157 lbs, and are moderately active (not too sure about this, as most of my day is spent in front of a computer).
+
+#### Macronutrients
+
+Carbohydrates:
+Fats:
+Proteins:
+
+#### Meal plan

@@ -71,3 +71,37 @@ Inheritance is the ability to extend a class so that we can reuse the attributes
 Defines a family of algorithms (behaviors), encapsulates each one, and makes them interchangeable. Strategy lets the algorithms (behaviors) vary independenttly from the clients that use them.
 
 #### When to use it:
+
+
+
+### Behavioral Patterns
+
+<b>Name:</b> Strategy  
+
+<b>Overview:</b>  
+
+![Strategy UML Diagram](/assets/strategy.png){:.center-image}
+
+- The strategy pattern allows you to encapsulate algorithms and makes them interchangeable.  
+- It decouples the decision of which strategy to use from the code that executes it.  
+- It helps ensure that the code abides by the open-closed principle, because we just need to change the strategy and not the individual methods whenever we need to use a different algorithm.
+
+<b>Examples:</b>  
+
+- Message storage in a chat application: When a message is received from a particular user, it may be processed in cache, in memory, on disk or in a database. Instead of having numerous if/else statments at various locations in the code, we can let the strategy handle the operations (storage, retrieval, update and deletion), thus alleviating the need to revisit that code whenever we need to change the algorithm.
+
+<br/>
+
+<b>Name:</b> Decorator
+
+<b>Overview:</b>
+
+![Strategy UML Diagram](/assets/decorator.png){:.center-image}
+
+- Provides an Alternative to subclassing for extending functionality.
+- One of the drawbacks is that it can lead to many small objects in our design.
+
+<b>Examples:</b>
+
+- The InputStream classes in the Java I/O package: The FileInputStream class is decorated by the BufferedInputStream class (improves performance by buffering data and adds ability to read lines) which is further decorated by the LineNumberInputStream class (adds ability to keep track of line numbers as data is read).
+

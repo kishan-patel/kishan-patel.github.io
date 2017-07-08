@@ -9,3 +9,5 @@ github_username: kishan-patel
 
 # Build settings
 markdown: kramdown
+
+gems: ['jekyll-plantuml']

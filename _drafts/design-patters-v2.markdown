@@ -38,13 +38,99 @@ The Composite pattern is useful when you want to model a tree-like-structure. Th
 
 ### The Command Pattern 
 
-SUNDAY
+#### <u>Summary</u>
+
+The command pattern should be used when you want to decouple the invoker of a command from the command itself. It allows a command to be executed at a later time.
+
+Parts of the Command Pattern:
+
+Client: Creates the commands and stores it in the invoker
+
+Invoker: Causes the command to be executed
+
+Command: Binds the operation to the receiver and decides which operation is to be performed on the receiver. Generally, the command object implements the Command interface and has an execute() method.
+
+Receiver: The object that knows how to perform the command. This logic in the receiver can be added to the command itself.
+ 
+
+#### <u>Example</u>
+<div class="plantUml">
+{% plantuml %}
+Class RequestProcessor {
+  -Executor executor
+  --
+  +void processRequest(Request request)
+}
+Class Executor {
+  +void addToQueue(long delay, Command command)
+}
+Interface Command {
+  +void execute()
+}
+Class CreateUser {
+}
+Class RetrieveUser {
+}
+Class UpdateUser {
+}
+Class DeleteUser {
+}
+note left of RequestProcessor
+void processRequest(Request request) {
+  switch(request.getType()) {
+    case CREATE:
+        executor.addToQueue(0, new CreateUser(request));
+    case RETRIEVE:
+	executor.addToQueue(0, new RetrieveUser(request));
+    case UPDATE:
+        executor.addToQueue(0, new UpdateUser(request));
+    case DELETE:
+        executor.addToQueue(0, new DeleteUser(request));
+    default:
+        throw new UnsupportedOperationException();
+  }
+}
+end note
+note bottom of CreateUser
+void execute() {
+  System.out.println("User successfully created.");  
+}
+end note
+note bottom of RetrieveUser
+void execute() {
+  System.out.println("User successfully retrieved.");
+}
+end note
+note bottom of UpdateUser
+void execute() {
+  System.out.println("User successfully updated.");
+}
+end note
+note bottom of DeleteUser
+void execute() {
+  System.out.println("User successfully removed.");
+}
+end note
+RequestProcessor .> Executor
+Executor .> Command
+Command <|... CreateUser
+Command <|. RetrieveUser
+Command <|.... UpdateUser
+Command <|.. DeleteUser
+{% endplantuml %}
+</div>
 
 ### The Visitor Pattern 
 
 #### <u>Summary</u>
 
-The Visitor Pattern is useful when you have a fairly stable structure of objects and you need to perform a set of operations on those objects. The objects performing the operation implement the Visitor interface, and those objects on which the operation is being performed on, implement the Visitable interface. It promotes the open/closed principle because the set of objects don't need to be modified each time there is a new operation that is added. The drawback to this pattern is that, whenever there is a new class implementing the Visitable interface that is added to the structure, all of the classes implementing the Visitor interface will need to be updated. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the exising classes would not be impacted at all.
+The Visitor pattern allows you to separate operations from the objects on which the operation is performed, thus allowing you to add new operations without modifying the classes which get operated on.
+
+The objects performing the operation implement the Visitor interface, and those objects on which the operation is being performed on, implement the Visitable interface. The Vistor interface has a method called visit for each object in the hierarchy that implements the Visitable interface.
+
+It promotes the open/closed principle because the set of objects don't need to be modified each time there is a new operation that is added. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the existing classes would not be impacted at all.
+
+The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.
 
 #### <u>Example</u>
 
@@ -74,14 +160,15 @@ Class RoleVisitor {
 }
 Class ExperienceVisitor {
 }
-Visitable <|.. Architect
-Visitable <|.. ProductOwner
+Visitable .> Visitor
+Visitable <|.... Architect
+Visitable <|. ProductOwner
 Visitable <|.. Manager
 Visitable <|.. Tester
 Visitable <|.. Developer
 Visitor <|... RoleVisitor
 Visitor <|... ExperienceVisitor
-note right of Visitable
+note left of Visitable
 void accept(Visitor visitor) {
     visitor.visit(this);
 }
@@ -140,6 +227,8 @@ architect.accept(experienceVisitor);
 end note
 {% endplantuml %}
 </div>
+
+https://manski.net/2013/05/the-visitor-pattern-explained/
 
 ### The Observer Pattern 
 

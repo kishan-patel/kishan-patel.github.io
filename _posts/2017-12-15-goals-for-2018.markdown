@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "2018 goals"
+---
+
+
+1. <b>Goal</b>: Do 10 consecutive muscle ups  
+   <b>Plan</b>: Do 50 pull-ups and 50 muscle ups (assisted) every other day
+
+2. <b>Goal</b>: Hit 2 on bench press, squats, dead lifts and 1 plate on shoulder press
+   <b>Plan</b>: Do 5 sets of 6-8 reps every other day
+
+3. <b>Goal</b>: Publish 1 App on Google Play Store
+   <b>Plan</b>: Work on it 1 hour each morning (steps: idea, uses cases, wireframe, implement)
+
+

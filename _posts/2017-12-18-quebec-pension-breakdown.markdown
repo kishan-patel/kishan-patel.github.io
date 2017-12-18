@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Takehome Pay in Quebec"
+title:  "How Much Pension will the Quebec Government Pay Me?"
 ---
 
 <h1>CHECK AGAIN SOON</h1>

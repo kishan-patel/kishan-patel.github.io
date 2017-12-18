@@ -9,17 +9,17 @@ categories: quick-reference
 
 <b>Find all files with the given name</b>: 
 {% highlight bash %}
-find -name 'file_name'
+find -name 'some_file_name'
 {% endhighlight %}  
 
 <b>Find all files that don't match the given name</b>: 
 {% highlight bash %}
-find -not -name 'file_name'  
+find -not -name 'some_file_name'  
 {% endhighlight %}
 
 <b>Find all files that contain the given string</b>: 
 {% highlight bash %}
-find . -type f -exec grep -l 'some_string' {} +</code>  
+find . -type f -exec grep -l 'some_string' {} +  
 {% endhighlight %}
 
 <b>Find all files with the given extension(s) that contain the given string</b>: 

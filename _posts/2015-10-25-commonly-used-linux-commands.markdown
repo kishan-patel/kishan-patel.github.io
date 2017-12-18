@@ -51,4 +51,9 @@ sed -i "s/'some_string_to_replace'/'some_string_to_replace_with'/g" *
 {% highlight bash %}
 echo "*'some_delimeter'*" | awk -F "'some_delimeter'" "{print $1}"
 {% endhighlight %}
+
+<b>Printing the first string in the second row</b>:
+{% highlight bash %}
+echo "some_string" | awk "NR==2 {print $1}"
+{% endhighlight %}
 <br/>

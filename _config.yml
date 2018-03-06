@@ -1,12 +1,6 @@
-# Site settings
-title: patelkishan.com 
-email: kishan@patelkishan.com
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.patelkishan.com" # the base hostname & protocol for your site
-github_username: kishan-patel 
+title: Merlot theme
+description: Merlot is a theme for GitHub Pages.
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-merlot
-
-# Build settings
-markdown: kramdown
-
-gems: ['jekyll-plantuml']
+markdown: kramdown 

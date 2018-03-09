@@ -2,7 +2,7 @@
 layout: default
 title:  Linux Commands 
 date:   2015-10-25 12:52:23
-categories: linux 
+categories: computer-science 
 ---
 
 <b>Find all files with the given name in current + child directories</b>: 

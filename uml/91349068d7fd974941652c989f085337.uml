@@ -1,0 +1,66 @@
+@startuml
+
+
+Class RequestProcessor {
+  -Executor executor
+  --
+  +void processRequest(Request request)
+}
+Class Executor {
+  +void addToQueue(long delay, Command command)
+}
+Interface Command {
+  +void execute()
+}
+Class CreateUser {
+}
+Class RetrieveUser {
+}
+Class UpdateUser {
+}
+Class DeleteUser {
+}
+note left of RequestProcessor
+void processRequest(Request request) {
+  switch(request.getType()) {
+    case CREATE:
+        executor.addToQueue(0, new CreateUser(request));
+    case RETRIEVE:
+	executor.addToQueue(0, new RetrieveUser(request));
+    case UPDATE:
+        executor.addToQueue(0, new UpdateUser(request));
+    case DELETE:
+        executor.addToQueue(0, new DeleteUser(request));
+    default:
+        throw new UnsupportedOperationException();
+  }
+}
+end note
+note bottom of CreateUser
+void execute() {
+  System.out.println("User successfully created.");  
+}
+end note
+note bottom of RetrieveUser
+void execute() {
+  System.out.println("User successfully retrieved.");
+}
+end note
+note bottom of UpdateUser
+void execute() {
+  System.out.println("User successfully updated.");
+}
+end note
+note bottom of DeleteUser
+void execute() {
+  System.out.println("User successfully removed.");
+}
+end note
+RequestProcessor .> Executor
+Executor .> Command
+Command <|... CreateUser
+Command <|. RetrieveUser
+Command <|.... UpdateUser
+Command <|.. DeleteUser
+
+@enduml

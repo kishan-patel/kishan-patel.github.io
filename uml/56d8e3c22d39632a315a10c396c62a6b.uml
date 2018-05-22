@@ -1,0 +1,94 @@
+@startuml
+
+Interface Visitable {
+  void accept(Visitor visitor)
+}
+Class Architect {
+}
+Class ProductOwner {
+}
+Class Manager {
+}
+Class Tester {
+}
+Class Developer {
+}
+Interface Visitor {
+  void visit(Architect architect)
+  void visit(ProductOwner productOwner)
+  void visit(Manager manager)
+  void visit(Tester tester)
+  void visit(Developer developer)
+}
+Class RoleVisitor {
+}
+Class ExperienceVisitor {
+}
+Visitable .> Visitor
+Visitable <|.. Architect
+Visitable <|.. Manager
+Visitable <|.. Tester
+Visitable <|.. Developer
+Visitable <|.. ProductOwner
+Visitor <|... RoleVisitor
+Visitor <|... ExperienceVisitor
+note right of Visitable
+note left of Visitable
+void accept(Visitor visitor) {
+    visitor.visit(this);
+}
+end note
+note bottom of RoleVisitor
+void visit(Architect architect) {
+    System.out.println("Decides on architecture.");
+}
+
+void visit(ProductOwner productOwner) {
+    System.out.prinln("Translates business requirements.");
+}
+
+void visit(Manager manager) {
+    System.out.prinln("Helps remove roadblocks.");
+}
+
+void visit(Tester tester) {
+    System.out.println("Tests the code.");
+}
+
+void visit(Developer developer) {
+    System.out.println("Writes the code.");
+}
+end note
+note bottom of ExperienceVisitor
+void visit(Architect architect) {
+    System.out.println("25+ years of required.");
+}
+
+void visit(ProductOwner productOwner) {
+    System.out.prinln("10+ years of experience required.");
+}
+
+void visit(Manager manager) {
+    System.out.prinln("10+ years of experience required.");
+}
+
+void visit(Tester tester) {
+    System.out.println("No experience required.");
+}
+
+void visit(Developer developer) {
+    System.out.println("No experience required.");
+}
+end note
+note as N1
+Client:
+
+RoleVisitor roleVisitor = new RoleVisitor();
+ExperienceVisitor experienceVisitor = new ExperienceVisitor();
+Architect architect = new Architect();
+
+architect.accept(roleVisitor);
+architect.accept(experienceVisitor);
+end note
+
+@enduml

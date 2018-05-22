@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+    <link rel="stylesheet" href="/assets/css/style.css?v=" media="screen">
+    <link rel="stylesheet" href="/assets/css/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="/assets/css/non-screen.css" media="handheld, only screen and (max-device-width:640px)">
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <script type="text/javascript" src="/assets/js/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+ <!--   
+    <script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  backgroundColor: 'rgb(255, 82, 82)',
+  textColor: '#fff'
+})</script>  -->
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Desing Patterns | Kishan Patel</title>
+<meta property="og:title" content="Desing Patterns" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Behavioral Patterns Command Pattern" />
+<meta property="og:description" content="Behavioral Patterns Command Pattern" />
+<link rel="canonical" href="http://localhost:4000/other/2018/05/21/design-patterns.html" />
+<meta property="og:url" content="http://localhost:4000/other/2018/05/21/design-patterns.html" />
+<meta property="og:site_name" content="Kishan Patel" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-21T00:00:00-04:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Behavioral Patterns Command Pattern","url":"http://localhost:4000/other/2018/05/21/design-patterns.html","headline":"Desing Patterns","dateModified":"2018-05-21T00:00:00-04:00","datePublished":"2018-05-21T00:00:00-04:00","sameAs":null,"@type":"BlogPosting","author":null,"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/other/2018/05/21/design-patterns.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <div class="shell">
+
+        <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <a href="/"><h1>Kishan Patel</h1></a>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+       <section id="downloads">
+          <span class="inner">
+            <a href="https://ca.linkedin.com/in/kishan-patel-588a5930" class="zip"><em>LinkedIn</em> visit</a><a href="https://github.com/kishan-patel" class="tgz"><em>GitHub</em>visit</a>
+          </span>
+        </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h2 id="behavioral-patterns">Behavioral Patterns</h2>
+
+<h3 id="command-pattern">Command Pattern</h3>
+
+<p>The command pattern should be used when you want to decouple the invoker of a command from the command itself. It allows a command to be executed at a later time.</p>
+
+<p>Parts of the Command Pattern:</p>
+
+<p>Client: Creates the commands and stores it in the invoker</p>
+
+<p>Invoker: Causes the command to be executed</p>
+
+<p>Command: Binds the operation to the receiver and decides which operation is to be performed on the receiver. Generally, the command object implements the Command interface and has an execute() method.</p>
+
+<p>Receiver: The object that knows how to perform the command. This logic in the receiver can be added to the command itself.</p>
+
+<p><img src="/uml/91349068d7fd974941652c989f085337.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+
+<h3 id="strategy-pattern">Strategy Pattern</h3>
+
+<p>The strategy pattern should be used when you have a set of algorithms that can be interchanged. The algorithms are encapsulated and the client does not have any knowledge of them. Each strategy essentially represents a behavior.</p>
+
+<p>It decreases the cyclomatic complexity because it reduces the number of if/else statements that would be present in your code.</p>
+
+<p>It is better for testing because rather than testing one large method and multiple execution paths, you can test multiple smaller strategies, reducing the possibility of missing an exeuction branch.</p>
+
+<p>It helps your code abide by the open-closed principle, as the client code does not need to be modified whenever there is a new behavior that is added.</p>
+
+<p><img src="/uml/dd4e9eacefc9b8ef0e875193ad799494.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+<!--
+https://softwareengineering.stackexchange.com/questions/302612/advantages-of-strategy-pattern
+http://java-x.blogspot.ca/2006/12/strategy-pattern.html
+-->
+
+<h3 id="observer-pattern">Observer Pattern</h3>
+
+<h3 id="state-pattern">State Pattern</h3>
+
+<h3 id="visitor-pattern">Visitor Pattern</h3>
+
+<p>The Visitor pattern allows you to separate operations from the objects on which the operation is performed, thus allowing you to add new operations without modifying the classes which get operated on.</p>
+
+<p>The objects performing the operation implement the Visitor interface, and those objects on which the operation is being performed on, implement the Visitable interface. The Vistor interface has a method called visit for each object in the hierarchy that implements the Visitable interface.</p>
+
+<p>It promotes the open/closed principle because the set of objects don’t need to be modified each time there is a new operation that is added. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the existing classes would not be impacted at all.</p>
+
+<p>The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.</p>
+
+<p><img src="/uml/56d8e3c22d39632a315a10c396c62a6b.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+<!--
+https://manski.net/2013/05/the-visitor-pattern-explained/
+-->
+
+<h2 id="structural-patterns">Structural Patterns</h2>
+
+<h3 id="composite-pattern">Composite Pattern</h3>
+
+<h3 id="decorator-pattern">Decorator Pattern</h3>
+
+<h3 id="flyweight-pattern">Flyweight Pattern</h3>
+
+<h3 id="proxy-pattern">Proxy Pattern</h3>
+
+<h3 id="adapter-pattern">Adapter Pattern</h3>
+
+<h3 id="bridge-pattern">Bridge Pattern</h3>
+
+<h3 id="facade-pattern">Facade Pattern</h3>
+
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            
+            
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>

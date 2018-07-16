@@ -5,8 +5,10 @@ date:   2018-05-21
 categories: other
 ---
 
-## Behavioral Patterns
- 
+## Behavioral Patterns  
+
+Behavioral Patterns are used to improve flexibility when it comes to communication between objects.
+
 ### Command Pattern
 
 The command pattern should be used when you want to decouple the invoker of a command from the command itself. It allows a command to be executed at a later time.
@@ -186,7 +188,52 @@ http://java-x.blogspot.ca/2006/12/strategy-pattern.html
 
 ### Observer Pattern
 
+<strong>What/When?</strong>  
+Comprises of the following objects: Publisher and Observer.
+
+Publisher: The Publisher maintains some state and notifies all interested observers of some even that takes place.
+
+Observer: The Observer registers itself via the Publisher whenever it wants to get notifications for a particular event, and de-registers itself when it is no longer interested.
+
+The pattern should be used when you need to implement a subscribe/publish scenario.
+
+<strong>Advantages?</strong>  
+It promotes lose coupling between the Subject and the Observer, which allows us to build more flexible systems that can handle change better, as it minimizes the interdepency between objects:  
+&nbsp;1/ The Publisher only needs to know that the Observer can be notified of a given event and nothing else specific about it  
+&nbsp;2/ The Observer only needs to know that they can register/de-register via the Publisher  
+&nbsp;3/ We can change and re-use the Publisher and Observer objects independently of each other  
+
+<strong>Disadvantages?</strong>  
+<font color="red">TODO</font>
+
+<strong>Example:</strong>  
+{% plantuml %}
+{% endplantuml %}
+
 ### State Pattern
+
+<strong>What/When?</strong>  
+Comprises of the following objects: Context and State. 
+
+State: There is one object per possible state in the system. The State object contains methods which represent the possible events that can occur at any given time. The handling of each event will be different for different states, as well, for each event, the state that a system will transition into after executing an event is dependent on the current internal state of the object.
+
+Context: Keeps track of the current state. It delegates any request that it may receive to one of the State objects.
+
+This pattern should be used when the behavior that an object is expected to perform is dependent on its internal state. We can view it as overseeing the State.
+
+<strong>Advantages?</strong>    
+&nbsp;1/State transitions are made more explicit as the logic is not buried in conditional statements  
+&nbsp;2/We encapsulate what varies thereby adhering to the Open Closed Principle
+
+<strong>Disadvantages?</strong>    
+<font color="red">TODO</font>
+
+<strong>Example:</strong>
+
+
+### The Chain of Responsibility Pattern
+
+
 
 ### Visitor Pattern
 
@@ -197,6 +244,9 @@ The objects performing the operation implement the Visitor interface, and those 
 It promotes the open/closed principle because the set of objects don't need to be modified each time there is a new operation that is added. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the existing classes would not be impacted at all.
 
 The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.
+
+<!-- <img src="http://www.plantuml.com/plantuml/png/hLHDRzGm4BtxLupsj2iaYo9nuGCLjKXme22euEnrPhjM7JlOaorLuR_ZREBOSQgeMd6AyzxBc-UPsJtt91orjMRiao5qEo4HVYYlI6mrmWC3E5XLWP0I6reV6UlWq3ytx2-xqC9xUE_aNX5AWeSH--firKhwScVGPV1dOSJD1Bb6JnFW4W-eRTDZPJ3hnbXzZdKgBk9fCrLCeZJPIw6BsUh-MR13JWgF6PSYL_6KklFDQapP8_hXTn0fD7B2fURpT_726VZc3-UfsoKnv2_XFdY9niWp8kyMYzawXkStAPZPRPYnXE3KpPx0xj9IzRZ6NG4lxTbnuX1VUTzosYk_UHrQXgQ2O3euRosHhOFt9EpokiG2t-yzOSrjIxnnof0swzKbIbMX1skIldN8LyVQx4bRzhXzvtxjXF5Q47hOjbuPz1uS_cgLmneD-R9CkQIBvXzHDvrTRGy8pefggwsydNkMgxtGZKxeWVO8qbQf2Gi_X6M_dquHveQB4vqlsUbpVV7o6ToZS3uOnvPN_scgPyypRnn3bsMMftgw-UdZlR9FT9oF-MJVOjh2mzKPkz11IgyOo_yxNNP-2mRl86FNmMks7wbgyM5IPfy_ia63V6Gw6HjPFlnVPS42FwFB446KBitEmx6jzJy0"/> -->
+
 
 {% plantuml %}
 Interface Visitable {
@@ -290,6 +340,7 @@ architect.accept(roleVisitor);
 architect.accept(experienceVisitor);
 end note
 {% endplantuml %}
+
 <!--
 https://manski.net/2013/05/the-visitor-pattern-explained/
 -->

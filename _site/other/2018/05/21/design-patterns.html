@@ -71,7 +71,12 @@
 
 <p>Behavioral Patterns are used to improve flexibility when it comes to communication between objects.</p>
 
+<!-- ################################################################### -->
+<!-- ################################################################### -->
+
 <h3 id="command-pattern">Command Pattern</h3>
+
+<p><strong>What/When:</strong></p>
 
 <p>The command pattern should be used when you want to decouple the invoker of a command from the command itself. It allows a command to be executed at a later time.</p>
 
@@ -85,85 +90,138 @@
 
 <p>Receiver: The object that knows how to perform the command. This logic in the receiver can be added to the command itself.</p>
 
+<p><strong>Advantages:</strong><br />
+1/It decouples the logic that will be executed (command) from the object that performs the execution (invoker) making it possible to add new commands without changing existing code.</p>
+
+<p>2/It provides a structured technique to store the users command thereby making it easier to perform undo/redo operations.</p>
+
 <p><img src="/uml/91349068d7fd974941652c989f085337.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+
+<!-- 
+Links:
+https://en.wikipedia.org/wiki/Command_pattern
+-->
+
+<!-- ################################################################### -->
+<!-- ################################################################### -->
 
 <h3 id="strategy-pattern">Strategy Pattern</h3>
 
-<p>The strategy pattern should be used when you have a set of algorithms that can be interchanged. The algorithms are encapsulated and the client does not have any knowledge of them. Each strategy essentially represents a behavior.</p>
+<p><strong>What/When:</strong></p>
 
-<p>It decreases the cyclomatic complexity because it reduces the number of if/else statements that would be present in your code.</p>
+<p>The strategy pattern should be used when you have a set of algorithms that can be interchanged. The algorithms are encapsulated and the client does not have any knowledge of them.</p>
 
-<p>It is better for testing because rather than testing one large method and multiple execution paths, you can test multiple smaller strategies, reducing the possibility of missing an exeuction branch.</p>
+<p>Parts of the Strategy Pattern:</p>
 
-<p>It helps your code abide by the open-closed principle, as the client code does not need to be modified whenever there is a new behavior that is added.</p>
+<p>Strategy: Each Strategy Essentially represents a behavior.</p>
 
-<p><img src="/uml/dd4e9eacefc9b8ef0e875193ad799494.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+<p><strong>Advantages:</strong><br />
+1/It decreases the cyclomatic complexity because it reduces the number of if/else statements that would be present in your code.</p>
+
+<p>2/It is better for testing because rather than testing one large method and multiple execution paths, you can test multiple smaller strategies, reducing the possibility of missing an exeuction branch.</p>
+
+<p>3/It helps your code abide by the open-closed principle, as the client code does not need to be modified whenever there is a new behavior that is added.</p>
+
+<p><img src="/uml/6101fc8defe6ff49f672d6fb4860e582.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
 <!--
-https://softwareengineering.stackexchange.com/questions/302612/advantages-of-strategy-pattern
-http://java-x.blogspot.ca/2006/12/strategy-pattern.html
+Links:
+1/ https://softwareengineering.stackexchange.com/questions/302612/advantages-of-strategy-pattern
+2/ http://java-x.blogspot.ca/2006/12/strategy-pattern.html 
 -->
+
+<!-- ################################################################### -->
+<!-- ################################################################### -->
 
 <h3 id="observer-pattern">Observer Pattern</h3>
 
 <p><strong>What/When?</strong><br />
-Comprises of the following objects: Publisher and Observer.</p>
+The pattern should be used when you need to implement a subscribe/publish scenario.</p>
+
+<p>Parts of the Observer Pattern: Publisher and Observer.</p>
 
 <p>Publisher: The Publisher maintains some state and notifies all interested observers of some even that takes place.</p>
 
 <p>Observer: The Observer registers itself via the Publisher whenever it wants to get notifications for a particular event, and de-registers itself when it is no longer interested.</p>
 
-<p>The pattern should be used when you need to implement a subscribe/publish scenario.</p>
-
-<p><strong>Advantages?</strong><br />
+<p><strong>Advantages:</strong><br />
 It promotes lose coupling between the Subject and the Observer, which allows us to build more flexible systems that can handle change better, as it minimizes the interdepency between objects:<br />
- 1/ The Publisher only needs to know that the Observer can be notified of a given event and nothing else specific about it<br />
- 2/ The Observer only needs to know that they can register/de-register via the Publisher<br />
- 3/ We can change and re-use the Publisher and Observer objects independently of each other</p>
-
-<p><strong>Disadvantages?</strong></p>
-<font color="red">TODO</font>
+ a/The Publisher only needs to know that the Observer can be notified of a given event and nothing else specific about it<br />
+ b/The Observer only needs to know that they can register/de-register via the Publisher<br />
+ c/We can change and re-use the Publisher and Observer objects independently of each other</p>
 
 <p><strong>Example:</strong></p>
 
+<!-- ################################################################### -->
+<!--                              STATE                                  -->
+<!-- ################################################################### -->
+
 <h3 id="state-pattern">State Pattern</h3>
 
-<p><strong>What/When?</strong><br />
-Comprises of the following objects: Context and State.</p>
+<p><strong>What/When:</strong></p>
+
+<p>This pattern should be used when the behavior that an object is expected to perform is dependent on its internal state. We can view it as overseeing the State.</p>
+
+<p>Parts of the State Pattern: Context and State.</p>
 
 <p>State: There is one object per possible state in the system. The State object contains methods which represent the possible events that can occur at any given time. The handling of each event will be different for different states, as well, for each event, the state that a system will transition into after executing an event is dependent on the current internal state of the object.</p>
 
 <p>Context: Keeps track of the current state. It delegates any request that it may receive to one of the State objects.</p>
 
-<p>This pattern should be used when the behavior that an object is expected to perform is dependent on its internal state. We can view it as overseeing the State.</p>
+<p><strong>Advantages:</strong>  <br />
+1/State transitions are made more explicit as the logic is not buried in conditional statements.</p>
 
-<p><strong>Advantages?</strong>  <br />
- 1/State transitions are made more explicit as the logic is not buried in conditional statements<br />
- 2/We encapsulate what varies thereby adhering to the Open Closed Principle</p>
-
-<p><strong>Disadvantages?</strong></p>
-<font color="red">TODO</font>
+<p>2/We encapsulate what varies thereby adhering to the Open Closed Principle.</p>
 
 <p><strong>Example:</strong></p>
 
+<!-- ################################################################### -->
+<!--                    CHAIN OF RESPONSIBILITY                          -->
+<!-- ################################################################### -->
+
 <h3 id="the-chain-of-responsibility-pattern">The Chain of Responsibility Pattern</h3>
+
+<p><strong>What/When:</strong><br />
+The Chain of Responsibility Pattern should be used when you want to decouple the sender of a request from the receiver of the request (i.e. the handler of the request).</p>
+
+<p>Parts of the Chain of Responsibility Pattern: Sender and Handler(s)</p>
+
+<p>Sender:  Delegates the request to some handler. It does not rely on a concrete handler implementation. Instead, it has access to one handler which it delegates the request to. That handler will accept the request if a certain criteria is met, otherwise it will find the next handler in line to process the request - this process is repeated until a handler is found or until there are no more handler that remain.</p>
+
+<p>Handler:  Responsible for processing a given request. A handler can contain one or more filters which it applies before deciding whether it should take ownership of the request.</p>
+
+<p><strong>Advantages:</strong><br />
+1/Promotes lose coupling because the sender of the request does not need to know who/what will handle the request.</p>
+
+<p><strong>Example:</strong></p>
+
+<!-- ################################################################### -->
+<!--                            VISITOR                                  -->
+<!-- ################################################################### -->
 
 <h3 id="visitor-pattern">Visitor Pattern</h3>
 
-<p>The Visitor pattern allows you to separate operations from the objects on which the operation is performed, thus allowing you to add new operations without modifying the classes which get operated on.</p>
+<p><strong>What/When:</strong><br />
+The Visitor pattern allows you to separate operations from the objects on which the operation is performed, thus allowing you to add new operations without modifying the classes which get operated on.</p>
 
 <p>The objects performing the operation implement the Visitor interface, and those objects on which the operation is being performed on, implement the Visitable interface. The Vistor interface has a method called visit for each object in the hierarchy that implements the Visitable interface.</p>
 
-<p>It promotes the open/closed principle because the set of objects don’t need to be modified each time there is a new operation that is added. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the existing classes would not be impacted at all.</p>
+<p><strong>Advantages:</strong><br />
+1/It promotes the open/closed principle because the set of objects don’t need to be modified each time there is a new operation that is added. In the example below, if we wanted to add a new feature to say, calculate pay, we would be able to easily accomplish this by adding a new class, and the existing classes would not be impacted at all.</p>
 
-<p>The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.</p>
+<p>2/ The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.</p>
 
-<!-- <img src="http://www.plantuml.com/plantuml/png/hLHDRzGm4BtxLupsj2iaYo9nuGCLjKXme22euEnrPhjM7JlOaorLuR_ZREBOSQgeMd6AyzxBc-UPsJtt91orjMRiao5qEo4HVYYlI6mrmWC3E5XLWP0I6reV6UlWq3ytx2-xqC9xUE_aNX5AWeSH--firKhwScVGPV1dOSJD1Bb6JnFW4W-eRTDZPJ3hnbXzZdKgBk9fCrLCeZJPIw6BsUh-MR13JWgF6PSYL_6KklFDQapP8_hXTn0fD7B2fURpT_726VZc3-UfsoKnv2_XFdY9niWp8kyMYzawXkStAPZPRPYnXE3KpPx0xj9IzRZ6NG4lxTbnuX1VUTzosYk_UHrQXgQ2O3euRosHhOFt9EpokiG2t-yzOSrjIxnnof0swzKbIbMX1skIldN8LyVQx4bRzhXzvtxjXF5Q47hOjbuPz1uS_cgLmneD-R9CkQIBvXzHDvrTRGy8pefggwsydNkMgxtGZKxeWVO8qbQf2Gi_X6M_dquHveQB4vqlsUbpVV7o6ToZS3uOnvPN_scgPyypRnn3bsMMftgw-UdZlR9FT9oF-MJVOjh2mzKPkz11IgyOo_yxNNP-2mRl86FNmMks7wbgyM5IPfy_ia63V6Gw6HjPFlnVPS42FwFB446KBitEmx6jzJy0"/> -->
+<p><strong>Example:</strong>
+<!-- <img src="http://www.plantuml.com/plantuml/png/hLHDRzGm4BtxLupsj2iaYo9nuGCLjKXme22euEnrPhjM7JlOaorLuR_ZREBOSQgeMd6AyzxBc-UPsJtt91orjMRiao5qEo4HVYYlI6mrmWC3E5XLWP0I6reV6UlWq3ytx2-xqC9xUE_aNX5AWeSH--firKhwScVGPV1dOSJD1Bb6JnFW4W-eRTDZPJ3hnbXzZdKgBk9fCrLCeZJPIw6BsUh-MR13JWgF6PSYL_6KklFDQapP8_hXTn0fD7B2fURpT_726VZc3-UfsoKnv2_XFdY9niWp8kyMYzawXkStAPZPRPYnXE3KpPx0xj9IzRZ6NG4lxTbnuX1VUTzosYk_UHrQXgQ2O3euRosHhOFt9EpokiG2t-yzOSrjIxnnof0swzKbIbMX1skIldN8LyVQx4bRzhXzvtxjXF5Q47hOjbuPz1uS_cgLmneD-R9CkQIBvXzHDvrTRGy8pefggwsydNkMgxtGZKxeWVO8qbQf2Gi_X6M_dquHveQB4vqlsUbpVV7o6ToZS3uOnvPN_scgPyypRnn3bsMMftgw-UdZlR9FT9oF-MJVOjh2mzKPkz11IgyOo_yxNNP-2mRl86FNmMks7wbgyM5IPfy_ia63V6Gw6HjPFlnVPS42FwFB446KBitEmx6jzJy0"/> --></p>
 
 <p><img src="/uml/56d8e3c22d39632a315a10c396c62a6b.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
 
 <!--
-https://manski.net/2013/05/the-visitor-pattern-explained/
+Links:
+1/https://manski.net/2013/05/the-visitor-pattern-explained/
 -->
+
+<!-- ################################################################### -->
+<!-- ################################################################### -->
 
 <h2 id="structural-patterns">Structural Patterns</h2>
 

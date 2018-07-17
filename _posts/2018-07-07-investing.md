@@ -19,17 +19,19 @@ Operating Profit = Gross Profit -  Fixed Costs (Marketing, Sales Commissions, et
 
 Net Income (NI - what goes to the owners) = Operating Profit - Liabilities - Taxes - Some other stuff  
 
+Enterprise Value (EV) =  Marketcap + Debt - Cash (cash is not associated with the enterprise) (This tries to capture the assets that are generating the operating profits for the enterprise)
+
 TTM = Trailing Twelve Months  
 
 Ratios:  
 &nbsp;1/Return on Asses (ROA) = Operating Profit / Total Assests  
 &nbsp;2/Return on Equity (ROE) = Net Income / Boook Value of Equity  
 &nbsp;3/Earnings per Share (EPS) = Net Income / Total Number of Shares
-&nbsp;4/Price to Equity (P/E) = Price of Share / Earnihgs per Share (EPS) (Loser P/E is desirable). It's not ideal for comparing two companies because it doesn't take into consideration the capital structure of the company. Two companies can have the save revenue but different P/E ratios due to debt and other liabilities.
+&nbsp;4/Price to Equity (P/E) = Price of Share / Earnihgs per Share (EPS) (Loser P/E is desirable). It's not ideal for comparing two companies because it doesn't take into consideration the capital structure of the company. Two companies can have the save revenue but different P/E ratios due to debt and other liabilities. For this you need to consider the Enterprise Value.
 
 
 <!-- Balance Sheet is a snapshot in time, and tells you how much you are worth at a given time-->
-<!-- Income Statement tells you what happened from one balance sheet to another-->
+<!-- Income Statement tells you what happened from one balance sheet to another 1003031 -->
 
 # Interest and debt
 

@@ -5,6 +5,16 @@ date:   2018-05-21
 categories: other
 ---
 
+## Creational Patterns
+
+Creational Patterns are used to construct objects and reduce design problems and added complexity which may result if done improperly.
+
+### Abstract Factory Pattern
+
+### Builder Pattern
+
+### Singleton Pattern
+
 ## Behavioral Patterns  
 
 Behavioral Patterns are used to improve flexibility when it comes to communication between objects.

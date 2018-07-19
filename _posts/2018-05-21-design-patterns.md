@@ -250,8 +250,11 @@ It promotes lose coupling between the Subject and the Observer, which allows us 
 &nbsp;c/We can change and re-use the Publisher and Observer objects independently of each other  
 
 <strong>Example:</strong>  
+
+<!--
 {% plantuml %}
 {% endplantuml %}
+-->
 
 <!-- ################################################################### -->
 <!--                              STATE                                  -->

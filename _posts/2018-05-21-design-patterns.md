@@ -43,6 +43,7 @@ Receiver: The object that knows how to perform the command. This logic in the re
 
 2/It provides a structured technique to store the users command thereby making it easier to perform undo/redo operations.
 
+<!--
 {% plantuml %}
 
 Class RequestProcessor {
@@ -107,6 +108,9 @@ Command <|. RetrieveUser
 Command <|.... UpdateUser
 Command <|.. DeleteUser
 {% endplantuml %}
+-->
+
+<img src="http://www.plantuml.com/plantuml/png/fPH1ZzCm48NF-5UCzfIANOipYv1GcqCb99RISZVsP3UIumdsUBlLqlyEgOEJagfKQYwsnlRtFEz55dEhGe0L_emO-C6JnX38mwi0k2jVK4Sc3zXFkkAT07ZxJBM1DktkpnRz23wDCx7luHdpceygOzRqDMB4mf9x18DMxMvXJasZd06TnWwnT8o-KXhpua19ry9Ya9fxL8oRW9tOFZV7liRdVykRraptBj3YgEY84InM35HDJ1ANk72uRjZMh9-AlYOVaTUx5ejPMWNGAY3CL-MdTVbUGFgowN9arhjRSBWTjLdyrPdT3wHLkLujo-z_M6_EGCQsdCHi7XQNNYXxUPgqA3-Nbv5o05EImKf5omE5dpnjaxmBiMt9CvelBNh5DRdoHMFRJOh3-RtO2tG6kaHJh3-8cHgWQcIdEFglKZpVTe6naHHPjhvsR5rnq-s547MNV1MjtO4-C8oycTq3dD7Ahb-bvXCbwPrHIxbSfnKxnd-LKcxNTjNGYPucZvFycDyKaIQfsByGeX_XmoyfvIZTyS9n44SdPB9jkZ9gyZS0"/></img>
 
 <!-- 
 Links:
@@ -133,6 +137,7 @@ Strategy: Each Strategy Essentially represents a behavior.
 
 3/It helps your code abide by the open-closed principle, as the client code does not need to be modified whenever there is a new behavior that is added.
 
+<!--
 {% plantuml %}
 Class MessageHandler {
 -Storage storage
@@ -214,6 +219,10 @@ Storable retrieve(String key) {
 }
 end note
 {% endplantuml %}
+-->
+
+<img src="http://www.plantuml.com/plantuml/png/xLFDSjem4BxhANPoCcsiF42RKo5JPfeBDBqBUmsUw8UH5cQOb7UlPNbngYOjpN3eeIU1zllPtK_-f5K8S8yXg3L-LhRMwE59b4jolhk1a4vHbkBzthKrR7hCGFZg7WBwOlW79fsJdw0B35jd0zvvPteqNu1FFphyKLX721eR0jTaxOYpVRl60QIK0hXl6Kyi1e1S8ythOd8zCcvkW5LQizLeq5A0VlgLHZdgeQqJaDNwjlzgpkVzjGqKV1_RMfAYNIWcS7iBqzcN-RVPOZPDX76O6ZKICkyqpkH3XpeEqaU1jeQuJj5QGj-e2e7JV1gIILjPac_j6XxnS7sQ6FPAxx1JJC3TjbPq5dBeRKJ6oWdhiRl7VLO_Ygf_VdUjnkKX49gnKQvD5QcL2lXhPMxlqJX_U5x97l8xANbsmR2FtyioTypAcMbMp7pJqrqv8cV0DIz8dxNob7KYIhSZkUsGf6rn5N6Hv2pG1g7fz24at5M_n36fjnayHEgV7JZXDpXC8pMo6k_CAnw_VIklAYyI-4Nj0ukFtqGU5WVzFwf_FYh-x2uSLMkXKjK6BnqGYru-4rQ-K1AicAt_1m00"></img>
+
 <!--
 Links:
 1/ https://softwareengineering.stackexchange.com/questions/302612/advantages-of-strategy-pattern
@@ -304,8 +313,9 @@ The objects performing the operation implement the Visitor interface, and those 
 2/ The Visitor pattern helps to solve the problem of double-dispatch. Java and other object oriented programming languages only support single dispatch, where the method to execute is chosen at run time based on the type of the object the method is being invoked on. This mechanism of selecting the method does not work for arguments being passed, and this is where the Vistor pattern may help out.  
 
 <strong>Example:</strong>
-<!-- <img src="http://www.plantuml.com/plantuml/png/hLHDRzGm4BtxLupsj2iaYo9nuGCLjKXme22euEnrPhjM7JlOaorLuR_ZREBOSQgeMd6AyzxBc-UPsJtt91orjMRiao5qEo4HVYYlI6mrmWC3E5XLWP0I6reV6UlWq3ytx2-xqC9xUE_aNX5AWeSH--firKhwScVGPV1dOSJD1Bb6JnFW4W-eRTDZPJ3hnbXzZdKgBk9fCrLCeZJPIw6BsUh-MR13JWgF6PSYL_6KklFDQapP8_hXTn0fD7B2fURpT_726VZc3-UfsoKnv2_XFdY9niWp8kyMYzawXkStAPZPRPYnXE3KpPx0xj9IzRZ6NG4lxTbnuX1VUTzosYk_UHrQXgQ2O3euRosHhOFt9EpokiG2t-yzOSrjIxnnof0swzKbIbMX1skIldN8LyVQx4bRzhXzvtxjXF5Q47hOjbuPz1uS_cgLmneD-R9CkQIBvXzHDvrTRGy8pefggwsydNkMgxtGZKxeWVO8qbQf2Gi_X6M_dquHveQB4vqlsUbpVV7o6ToZS3uOnvPN_scgPyypRnn3bsMMftgw-UdZlR9FT9oF-MJVOjh2mzKPkz11IgyOo_yxNNP-2mRl86FNmMks7wbgyM5IPfy_ia63V6Gw6HjPFlnVPS42FwFB446KBitEmx6jzJy0"/> -->
+<img src="http://www.plantuml.com/plantuml/png/hLHDRzGm4BtxLupsj2iaYo9nuGCLjKXme22euEnrPhjM7JlOaorLuR_ZREBOSQgeMd6AyzxBc-UPsJtt91orjMRiao5qEo4HVYYlI6mrmWC3E5XLWP0I6reV6UlWq3ytx2-xqC9xUE_aNX5AWeSH--firKhwScVGPV1dOSJD1Bb6JnFW4W-eRTDZPJ3hnbXzZdKgBk9fCrLCeZJPIw6BsUh-MR13JWgF6PSYL_6KklFDQapP8_hXTn0fD7B2fURpT_726VZc3-UfsoKnv2_XFdY9niWp8kyMYzawXkStAPZPRPYnXE3KpPx0xj9IzRZ6NG4lxTbnuX1VUTzosYk_UHrQXgQ2O3euRosHhOFt9EpokiG2t-yzOSrjIxnnof0swzKbIbMX1skIldN8LyVQx4bRzhXzvtxjXF5Q47hOjbuPz1uS_cgLmneD-R9CkQIBvXzHDvrTRGy8pefggwsydNkMgxtGZKxeWVO8qbQf2Gi_X6M_dquHveQB4vqlsUbpVV7o6ToZS3uOnvPN_scgPyypRnn3bsMMftgw-UdZlR9FT9oF-MJVOjh2mzKPkz11IgyOo_yxNNP-2mRl86FNmMks7wbgyM5IPfy_ia63V6Gw6HjPFlnVPS42FwFB446KBitEmx6jzJy0">
 
+<!--
 {% plantuml %}
 Interface Visitable {
   void accept(Visitor visitor)
@@ -398,6 +408,7 @@ architect.accept(roleVisitor);
 architect.accept(experienceVisitor);
 end note
 {% endplantuml %}
+-->
 
 <!--
 Links:

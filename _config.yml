@@ -1,7 +1,6 @@
 title: Kishan Patel 
 description: Blogs about computer science, finance, and fitness 
 show_downloads: true
-google_analytics:
 theme: jekyll-theme-hacker
 markdown: kramdown 
 plugins: ['jekyll-plantuml']

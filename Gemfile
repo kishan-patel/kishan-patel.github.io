@@ -5,6 +5,7 @@ gem 'asciidoctor'
 gem 'coderay'
 gem 'rake-jekyll'
 gem 'jekyll-plantuml'
+gem 'jekyll-theme-hacker'
 group :jekyll_plugins do
   gem "jekyll-asciidoc"
   gem 'asciidoctor-diagram' 

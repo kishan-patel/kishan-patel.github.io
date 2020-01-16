@@ -68,18 +68,54 @@ https://www.modus-made.com/en/Ideas/CSS-Tricks-Expanding-Beyond-a-Parent-div
 <b>Buying power - All in CAD</b>:  
 <b>Buying power - All in USD</b>:  
 
+<!--
+NAV (net asset value): Total value of all it's underlying holdings (e.g. if fund is valued at 1 billion and there are 50 million units, the NAV is $20 per unit); NAV is also defacto asset price (applies to mutual funds only)
+
+-->
+
 # Questions
-<b>1- What to look for when picking a stock (i.e. how do you know a stock is a good buy)?</b>  
-<b>2- What are the different investment strategies for long-term growth?</b>  
-<b>3- What are some ways to achieve a rate of return greater than 10%?</b>  
-<b>4- What pieces of information should you monitor for companies you have holdings in?</b>    
-<b>5- What is the procedure to transfer TFSA from another bank institution to Questrade?</b>    
-<b>6- What is the rate of return if dividends are re-invested? Are dividends re-invested automatically?</b>  
-<b>7- What is the difference between AGR and CAGR?</b>  
-<b>8- What are the fees associated with holding US stocks in your TFSA?</b>  
-<b>9- What is the procedure to rebalance on Questrade?</b>
-<b>10- What is Norbert's Gambit?</b>  
-<b>11- What is the procedure to but CAD stock or CAD etf?</b>  
-<b>12- What is the procedure to buy US stock or US etf?</b>  
-<b>13- What is the procedure to minimize the witholding tax for dividends paid by US stocks?</b>  
-<b>14- How do you automatically re-invest dividends?</b>  
+1- What to look for when picking a stock (i.e. how do you know a stock is a good buy)?    
+2- What are the different investment strategies for long-term growth?    
+3- What are some ways to achieve a rate of return greater than 10%?  
+4- What pieces of information should you monitor for companies you have holdings in?  
+<b>5- What is the procedure to transfer to a Questrade TFSA account?</b>  
+
+<b>6- How do you read the performance of an ETF (i.e. does it include a fees, dividends)?</b>  
+The performance includes fees, capital gains, as well as income from dividends [1].
+
+<b>7- What is the rate of return if dividends are re-invested? Are dividends re-invested automatically?</b>  
+Dividends are not re-invested automatically, but the performance (i.e. rate of return) takes into consideration dividend payments and assumes that they are re-invested [1].
+
+<b>8- What is the difference between AGR and CAGR?</b>  
+AGR stands for annual growth rate and CAGR stantds for compound annual growth rate. The CAGR represents the cumulative effects of a series of gains or losses on some amount over some period of time [5].  
+
+AGR = sum of annual returns / # of years  
+CAGR = (final amount / original amount)^(1 / # of years) - 1
+
+E.g [6]:  
+You start out with $100 and in the first year, your investment goes up by 100%, while in the second year, it goes down by 50%. How much do you have at the end of year 2 and what are the AGR and CAGR values?  
+
+Amount at the end of 2 years = 100\*(1+100/100)*(1-50/100) = 100  
+AGR = (100 - 50) / 2 = 50% (you're investment didn't go up by 50%, so this is not entirely accurate)  
+CAGR = (100/100)^(1/2) - 1 = 0% (this is more accurate as your investment did not change)  
+
+The bottome line is that if you are interested in knowing how much you're initial amount will be worth after x number of years, you need to know what the CAGR is and not the AGR.  
+
+<b>9- What are the fees associated with holding US stocks in your TFSA?</b>  
+There is a 15% witholding tax for any income earned from US stocks for non-US residents, however, there is not witholding tax that is applied if the US stocks in question are held in an RRSP account [2]. To qualify for this 15%, you'd need to fillout a W-8BEN form, otherwise, the witholding tax is 30% for non-US residents [3]. Questrade seems to take care of this and it doesn't appear as if clients need to fill out this form [4]. The taxes are witheld at source (i.e. you don't have to explicitly pay them).
+  
+
+<b>10- What is the procedure to rebalance on Questrade?</b>  
+<b>11- What is Norbert's Gambit?</b>  
+<b>12- What is the procedure to buy CAD stock or CAD etf?</b>  
+<b>13- What is the procedure to buy US stock or US etf?</b>  
+<b>14- What is a margin account?</b>  
+<b>15- How to use dividend yield to compute amount of dividends to be paid?</b>
+
+Sources:  
+[1]https://www.theglobeandmail.com/globe-investor/investor-education/are-fees-included-in-my-funds-returns/article34638412/   
+[2]https://www.moneysense.ca/save/investing/investing-u-s-stocks-in-a-tfsa/  
+[3]https://www.moneysense.ca/save/taxes/filing-taxes-u-s-investments-canada/  
+[4]https://www.reddit.com/r/PersonalFinanceCanada/comments/69guhu/questrade_saying_w8ben_isnt_necessary/  
+[5]https://thecollegeinvestor.com/919/average-annual-return-vs-compound-annual-return/
+[6]http://www.moneychimp.com/features/market_cagr.htm

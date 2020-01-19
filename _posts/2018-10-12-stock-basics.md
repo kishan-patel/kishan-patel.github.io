@@ -75,10 +75,18 @@ NAV (net asset value): Total value of all it's underlying holdings (e.g. if fund
 
 # Questions
 1- What to look for when picking a stock (i.e. how do you know a stock is a good buy)?    
-2- What are the different investment strategies for long-term growth?    
+Not relevant at this moment since the goal is not to invest in individual stocks.
+
+2- What are the different investment strategies for long-term growth?      
+Buy-and-Hold and Crossover Trading are two (will most likely just stick to Buy-and-Hold as I don't to spend all my time monitoring stocks).
+
 3- What are some ways to achieve a rate of return greater than 10%?  
+The plant at the moment is to invest bond/stock ETFs for TFSA and stock ETFs for RPP, so in the former case, the goal is just to earn a return close to the market rate and on par with the market rate for the latter case.
+
 4- What pieces of information should you monitor for companies you have holdings in?  
-<b>5- What is the procedure to transfer to a Questrade TFSA account?</b>  
+Not planning on investing in individual companies so question is not relevant at this point.  
+
+5- What is the procedure to transfer to a Questrade TFSA account and buy stocks/etfs?  
 
 <b>6- How do you read the performance of an ETF (i.e. does it include a fees, dividends)?</b>  
 The performance includes fees, capital gains, as well as income from dividends [1].
@@ -106,16 +114,41 @@ There is a 15% witholding tax for any income earned from US stocks for non-US re
   
 
 <b>10- What is the procedure to rebalance on Questrade?</b>  
+There are many rebalincing strategies:  
+  (1) Calendar based - you rebalance anually or several times per year [7]  
+  (2) Thresholds based - you rebalance when an asset it a certain number of percentage points above its treshold base [7]  
+  (3) Cash flow based - this is more for people that make regular contributions and it involves buying more of the   underrepresented asset (or selling overrepresented assets in the case of withrawls) [7]  
+
 <b>11- What is Norbert's Gambit?</b>  
-<b>12- What is the procedure to buy CAD stock or CAD etf?</b>  
-<b>13- What is the procedure to buy US stock or US etf?</b>  
-<b>14- What is a margin account?</b>  
-<b>15- How to use dividend yield to compute amount of dividends to be paid?</b>
+It is a technique that allows you to eleminte currency exchange fess. If brokerages charge 1.5% for currency exchange, that equates to $15 for every $1,000 being exchanged, which can quickly add up. The idea involves buying shares that are listed on both Canadian and US exchanges [9]. You can use the Horizons U.S. Dollar Currency ETF to accomplish this [9].  
+
+Below is the detailed procedure for converting $10,000 CAD to $USD:  
+(1) See how many shares you can buy for $10,000 CAD [9]  
+(2) Place an order for that many shares [9]  
+(3) Call the brokerage to convert Canadian version of this ETF to the US version (the technique is called journaling?) [9]  
+(4) Sell your US shares [9]  
+Note: This technique will only work if you can hold US dollars into your account, which you can't in an RRSP [9].
+
+<b>12- What is a margin account?</b>  
+A margin account is a brokerage account where the broker lends the customer money to purchase stocks/bonds [10]. There is a periodic interest rate that is charged [10]. 
+
+<b>13- How to use dividend yield to compute amount of dividends to be paid?</b>  
+dividend yield = dividend per share / stock price per share  
+divident per share = dividend yield * stock price per share  
+total dividends = # of shares owned * dividend per share  
+
+<b>14- How to automatically re-invest dividends?</b>  
+You need to fill out a drip  (divident reinvestment plan) form [8]. 
 
 Sources:  
-[1]https://www.theglobeandmail.com/globe-investor/investor-education/are-fees-included-in-my-funds-returns/article34638412/   
-[2]https://www.moneysense.ca/save/investing/investing-u-s-stocks-in-a-tfsa/  
-[3]https://www.moneysense.ca/save/taxes/filing-taxes-u-s-investments-canada/  
-[4]https://www.reddit.com/r/PersonalFinanceCanada/comments/69guhu/questrade_saying_w8ben_isnt_necessary/  
-[5]https://thecollegeinvestor.com/919/average-annual-return-vs-compound-annual-return/
-[6]http://www.moneychimp.com/features/market_cagr.htm
+[1] https://www.theglobeandmail.com/globe-investor/investor-education/are-fees-included-in-my-funds-returns/article34638412/   
+[2] https://www.moneysense.ca/save/investing/investing-u-s-stocks-in-a-tfsa/  
+[3] https://www.moneysense.ca/save/taxes/filing-taxes-u-s-investments-canada/  
+[4] https://www.reddit.com/r/PersonalFinanceCanada/comments/69guhu/questrade_saying_w8ben_isnt_necessary/  
+[5] https://thecollegeinvestor.com/919/average-annual-return-vs-compound-annual-return/  
+[6] http://www.moneychimp.com/features/market_cagr.htm  
+[7] https://canadiancouchpotato.com/2014/06/23/rebalancing-with-cash-flows/  
+[8] https://questrade-support.secure.force.com/mylearning/view/h/Investing/DRIP-Dividend+Reinvestment+plan  
+[9] https://www.moneysense.ca/magazine-archive/norberts-gambit-a-better-way-to-buy-u-s-dollars/  
+[10] https://www.investopedia.com/terms/m/marginaccount.asp  
+[11] https://www.moneysense.ca/save/taxes/how-to-calculate-capital-gains-tax-for-an-employee-share-purchase-plan/  
